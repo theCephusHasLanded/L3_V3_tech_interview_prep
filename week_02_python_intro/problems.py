@@ -7,4 +7,6 @@ passif not lst:
     return max(lst)
 
 def is_palindrome(word):
+    //solve for possible case sensitivity
+    word = ''.join(c.lower() for c in word if c.isalnum())
     return word == word[::-1]
